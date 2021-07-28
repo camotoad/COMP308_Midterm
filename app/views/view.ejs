@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title><%= title %> </title>
+    <link rel="stylesheet" type="text/css" href="css/display.css" />
+
+</head>
+<body>
+
+    <h2> List of Surveys</h2>
+    <form method="post" action="/view">
+    <table class="center">
+        <tr>
+            <td>
+                <div>
+                    <label>SurveyId</label>
+                </div>
+
+            </td>
+            <td>
+
+                <div>
+                    <label>Game Genre</label>
+
+                </div>
+
+            </td>
+            <td>
+                <div>
+                    <label>Days played per Year</label>
+                </div>
+            </td>
+            <td>
+                <div>
+                    <label>Age</label>
+                </div>
+            </td>
+            <td>
+                <div>
+                    <label>Delete the Survey</label>
+                </div>
+            </td>
+            
+        </tr>
+
+
+        <% surveys.forEach(function(surveys){ %>
+
+        <tr>
+            <td>
+                <div>
+
+                    <input type="text" name="surveyId"  value="<%= surveys.surveyId %>" />
+                </div>
+
+            </td>
+            <td>
+                <div>
+                    <input type="text" name="gameGenre"  value="<%= surveys.gameGengre %>" />
+                </div>
+
+            </td>
+            <td>
+                <div>
+                    <input type="text" name="daysPerYear"  value="<%= surveys.daysPerYear %>" />
+                </div>
+            </td>    
+            <td>
+                <div>
+                    <input type="text" name="Age"  value="<%= surveys.age %>" />
+                </div>
+            </td>   
+            <td>
+                <div>
+                    <input type="submit" value="Delete" style="width: 200px"/>
+                </div>
+            </td>                  
+
+        </tr>
+
+        <% })%>
+
+    </table>
+</form>
+    <a href="http://localhost:3000/main"> Main Page</a>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title><%= title %></title>
+</head>
+<body>
+
+    <form method = "post" action="/add">
+        <label for="1">SurveyID: </label>
+        <input type="text" size="30" placeholder="SurveyID" name="surveyId" id="1"><br />
+        <label for="2">Game Genre: </label>
+        <input type="text" size="30" placeholder="Game Genre" name="gameGengre" id="2"><br />
+        <label for="3">Days Played per Year: </label>
+        <input type="text" size="30" placeholder="Days Played per Year" name="daysPerYear" id="3"><br />
+        <label for="3">Age: </label>
+        <input type="text" size="30" placeholder="Age" name="age" id="3"><br />  
+        <br>
+        <input type="submit" value="Add to Survey" name="Add to Survey">
+        <br>
+        <a href="http://localhost:3000/main"> Main Page</a>
+        <br>
+        <a href="http://localhost:3000"> Sign Out</a>
+    
+    </form>
+
+</body>
+
+</html>
